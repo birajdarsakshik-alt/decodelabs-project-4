@@ -121,6 +121,6 @@ Dynamic DOM Update
 
 ## Developer
 
-Esakki Raja Salaikumar
+Sakshi Birajdar
 
 Full Stack Development Trainee - DecodeLabs Batch 2026
