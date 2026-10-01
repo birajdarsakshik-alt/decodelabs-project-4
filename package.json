@@ -1,0 +1,18 @@
+{
+  "name": "decodelabs-project-4",
+  "version": "1.0.0",
+  "description": "DecodeLabs Full Stack Development Project 4 - Frontend and Backend Integration",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "keywords": ["decodelabs", "full-stack", "express", "sqlite", "rest-api"],
+  "author": "Esakki Raja Salaikumar",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "sqlite3": "^5.1.7"
+  }
+}

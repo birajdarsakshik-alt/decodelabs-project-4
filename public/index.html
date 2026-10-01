@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DecodeLabs Project 4 Student Management System" />
+  <title>DecodeLabs | Student Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">DecodeLabs • Full Stack Development</p>
+        <h1>Student Management System</h1>
+        <p class="hero-text">Project 4 — Frontend &amp; Backend Integration</p>
+      </div>
+      <div class="api-status" id="apiStatus">
+        <span class="status-dot"></span>
+        Checking API...
+      </div>
+    </header>
+
+    <main>
+      <section class="stats-grid" aria-label="Student statistics">
+        <article class="stat-card">
+          <span>Total Students</span>
+          <strong id="studentCount">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>API</span>
+          <strong>REST</strong>
+        </article>
+        <article class="stat-card">
+          <span>Database</span>
+          <strong>SQLite</strong>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel form-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">Input</p>
+              <h2 id="formTitle">Add Student</h2>
+            </div>
+            <button id="cancelEditButton" class="button button-ghost hidden" type="button">Cancel Edit</button>
+          </div>
+
+          <form id="studentForm" novalidate>
+            <input type="hidden" id="studentId" />
+
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="e.g. Rahul Patil" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="e.g. rahul@example.com" required />
+
+            <label for="course">Course</label>
+            <input id="course" name="course" type="text" placeholder="e.g. B.Sc IT" required />
+
+            <label for="year">Year</label>
+            <select id="year" name="year" required>
+              <option value="">Select year</option>
+              <option value="FY">FY</option>
+              <option value="SY">SY</option>
+              <option value="TY">TY</option>
+            </select>
+
+            <label for="skills">Skills</label>
+            <input id="skills" name="skills" type="text" placeholder="JavaScript, Node.js, SQLite" required />
+            <small>Separate skills with commas.</small>
+
+            <button id="submitButton" class="button button-primary" type="submit">Add Student</button>
+          </form>
+        </article>
+
+        <article class="panel students-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">Output</p>
+              <h2>Students</h2>
+            </div>
+            <button id="refreshButton" class="button button-secondary" type="button">Refresh</button>
+          </div>
+
+          <div id="message" class="message hidden" role="alert"></div>
+          <div id="loading" class="loading hidden">Loading students...</div>
+          <div id="emptyState" class="empty-state hidden">
+            <h3>No students yet</h3>
+            <p>Add your first student using the form.</p>
+          </div>
+          <div id="studentList" class="student-list"></div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <span>Project 4 • API Integration • Async Requests • Dynamic UI</span>
+      <a href="/api" target="_blank" rel="noopener">View API</a>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
